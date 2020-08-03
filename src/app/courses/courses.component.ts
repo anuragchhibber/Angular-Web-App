@@ -3,18 +3,12 @@ import { CoursesService } from '../courses.service';
 
 @Component({
     selector: 'courses',
-    template: `
-        <h2>{{ title }}</h2>
-        <ul>
-            <li *ngFor="let course of courses">
-                   {{ course }} 
-            </li>
-        </ul>
-    `
+    templateUrl: './courses.component.html'
 })
 
 export class CoursesComponent{
-    title = "List of Courses: ";
+    title1 = "List of Courses: ";
+    image = "http://lorempixel.com/400/200";
     courses;
     
     constructor(service: CoursesService){
