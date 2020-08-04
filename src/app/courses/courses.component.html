@@ -10,4 +10,27 @@
 <!-- * * * * * * * Property Binding - One way: Component to DOM * * * * * * * -->
 
     <img [src] = "image"/>
+
+<!-- * * * * * * * Attribute Binding  * * * * * * * * * * * * * * -->
+<!-- * * * * * * * If propery of DOM is not matching attribute of HTML element  * * * * * * * * * * * * * * -->
+<table>
+    <tr>
+        <td [attr.colSpan] = "colSpan"></td>
+    </tr>
+</table>
+<!-- * * * * * * * Class Binding and Style Binding  * * * * * * * * * * * * * * -->
+    <button class="btn btn-primary" [class.active] = "isActive" [style.backgroundColor] = "isActive? 'red' : 'green'">Save</button>
+
+<!-- * * * * * * * Event Binding and Event bubbling * * * * * * * * * * * * * * -->
+<div (click) = "onDivClicked()">
+    <button class="btn btn-primary" (click) = "onSave($event)">Submit</button>
 </div>
+
+<!-- * * * * * * * Event Filtering - Event when enter is pressed* * * * * * * * * * * * * * -->
+<!-- * * * * * * * Template Variable - Passing Data to component* * * * * * * * * * * * * * -->
+<input #email class="form-control" (keyup.enter)="onKeyUp(email.value)"/>
+</div>
+
+
+
+

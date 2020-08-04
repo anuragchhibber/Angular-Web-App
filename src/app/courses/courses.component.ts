@@ -8,11 +8,28 @@ import { CoursesService } from '../courses.service';
 
 export class CoursesComponent{
     title1 = "List of Courses: ";
-    image = "http://lorempixel.com/400/200";
+    image = "http://lorempixel.com/500/300";
+    colSpan = 1;
+    isActive = true;
     courses;
     
     constructor(service: CoursesService){
         this.courses = service.getCourses();
+    }
+
+    onDivClicked(){
+        console.log("Div Clicked");
+    }
+
+    onSave($event){
+        //Stopping event bubbling - no call to onDivClicked method
+        $event.stopPropagation();
+
+        console.log("Button was clicked", $event);
+    }
+
+    onKeyUp(email){
+        console.log(email);
     }
 
 
