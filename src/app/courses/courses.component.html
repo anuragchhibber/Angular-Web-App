@@ -28,7 +28,10 @@
 
 <!-- * * * * * * * Event Filtering - Event when enter is pressed* * * * * * * * * * * * * * -->
 <!-- * * * * * * * Template Variable - Passing Data to component* * * * * * * * * * * * * * -->
-<input #email class="form-control" (keyup.enter)="onKeyUp(email.value)"/>
+<!-- <input #email class="form-control" (keyup.enter)="onKeyUp(email.value)"/> -->
+
+<!-- * * * * * * * Two way binding - Part of @angular/forms module* * * * * * * * * * * * * * -->
+<input class="form-control" [(ngModel)]="email" (keyup.enter)="onKeyUp()"/>
 </div>
 
 

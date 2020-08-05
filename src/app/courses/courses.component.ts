@@ -11,6 +11,7 @@ export class CoursesComponent{
     image = "http://lorempixel.com/500/300";
     colSpan = 1;
     isActive = true;
+    email = "me@angular.com";
     courses;
     
     constructor(service: CoursesService){
@@ -28,8 +29,8 @@ export class CoursesComponent{
         console.log("Button was clicked", $event);
     }
 
-    onKeyUp(email){
-        console.log(email);
+    onKeyUp(){
+        console.log(this.email);
     }
 
 
