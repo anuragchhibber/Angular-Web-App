@@ -12,6 +12,9 @@ export class CoursesComponent{
     colSpan = 1;
     isActive = true;
     email = "me@angular.com";
+    post = {
+        isFavorite: true
+    }
     courses;
     
     constructor(service: CoursesService){
@@ -32,6 +35,8 @@ export class CoursesComponent{
     onKeyUp(){
         console.log(this.email);
     }
+
+    
 
 
 }

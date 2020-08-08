@@ -18,6 +18,9 @@
         <td [attr.colSpan] = "colSpan"></td>
     </tr>
 </table>
+
+<!-- * * * * * * * Input Properties - Component API* * * * * * * * * * * * * * -->
+<favorite [isFavorite]="post.isFavorite"></favorite>
 <!-- * * * * * * * Class Binding and Style Binding  * * * * * * * * * * * * * * -->
     <button class="btn btn-primary" [class.active] = "isActive" [style.backgroundColor] = "isActive? 'red' : 'green'">Save</button>
 
@@ -32,6 +35,8 @@
 
 <!-- * * * * * * * Two way binding - ngModel Part of @angular/forms module* * * * * * * * * * * * * * -->
 <input class="form-control" [(ngModel)]="email" (keyup.enter)="onKeyUp()"/>
+
+
 </div>
 
 
