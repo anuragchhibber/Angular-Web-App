@@ -10,10 +10,10 @@ export class CoursesComponent{
     title1 = "List of Courses: ";
     image = "http://lorempixel.com/500/300";
     colSpan = 1;
-    isActive = true;
+    isActive = false;
     email = "me@angular.com";
     post = {
-        isFavorite: true
+        isFavorite: false
     }
     courses;
     
